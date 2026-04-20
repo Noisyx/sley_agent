@@ -1,5 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export default function PricingCTA() {
   return (
@@ -18,7 +19,9 @@ export default function PricingCTA() {
           </p>
           <div className="flex justify-center">
             <Link
-              href="https://wa.me/xxx"
+              href={buildWhatsAppLink({
+                text: "Bonjour — je veux choisir une offre Sley Agent et automatiser mon WhatsApp.",
+              })}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 justify-center px-8 py-4 text-base font-bold text-green-700 bg-white hover:bg-gray-50 rounded-full transition-all hover:scale-105 shadow-lg group"

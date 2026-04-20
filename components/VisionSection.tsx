@@ -2,7 +2,7 @@ export default function VisionSection() {
   return (
     <section className="py-32 bg-gray-50 relative overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-300 italic mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-500 italic mb-8">
           Imaginez...
         </h2>
         <p className="text-2xl md:text-4xl font-medium text-gray-900 leading-snug">

@@ -1,78 +1,146 @@
 "use client";
 
-import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import React, { useId, useState } from "react";
+import Link from "next/link";
+import { ChevronDown, MessageCircle } from "lucide-react";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const faqs = [
   {
     question: "Est-ce que ça marche pour mon business ?",
-    answer: "Oui, absolument. Que vous soyez artisan, e-commerçant, consultant ou restaurateur, Sley Agent s'adapte à votre activité. Nous avons déjà accompagné des dizaines d'entreprises dans des secteurs variés et nous configurons ensemble l'assistant pour qu'il réponde parfaitement à vos besoins spécifiques."
+    answer:
+      "Oui. Que vous soyez artisan, e-commerçant, consultant ou restaurateur, Sley Agent s’adapte à votre activité. On configure ensemble les réponses, le ton et les scénarios pour coller à votre offre.",
   },
   {
     question: "Combien de temps pour la mise en place ?",
-    answer: "La plupart de nos clients sont opérationnels en moins de 24h. Une fois votre offre choisie, nous planifions ensemble un court appel de configuration et nous vous guidons pas à pas. Vous pouvez commencer à automatiser vos réponses dès la première heure."
+    answer:
+      "En général moins de 24h. Après le choix de l’offre, on fait un court call de configuration, puis on vous guide pas à pas. Vous pouvez automatiser vos réponses très rapidement.",
   },
   {
     question: "Est-ce que je peux modifier les messages ?",
-    answer: "Absolument. Vous pouvez modifier les messages à tout moment depuis votre espace client. Nous vous accompagnons pour configurer les messages qui correspondent le mieux à votre activité."
+    answer:
+      "Oui. Vous pouvez ajuster les messages et scénarios à tout moment. On vous accompagne pour garder un ton cohérent et maximiser la conversion.",
   },
   {
     question: "Est-ce que je peux changer d'offre en cours de route ?",
-    answer: "Bien sûr, vous pouvez passer à une offre supérieure à tout moment."
+    answer:
+      "Oui. Vous pouvez passer à une offre supérieure à tout moment, selon votre volume et vos besoins.",
   },
   {
     question: "Est-ce que vous proposez un accompagnement ?",
-    answer: "Oui, surtout dans les offres Pro et Premium. Nous vous accompagnons dans la mise en place et l'utilisation de nos services. Contactez-nous pour en bénéficier."
-  }
+    answer:
+      "Oui. Nous vous accompagnons sur la mise en place, l’optimisation des scripts et l’amélioration continue (selon l’offre).",
+  },
 ];
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const baseId = useId();
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 ">
+    <section
+      id="faq"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50"
+      aria-label="Questions fréquentes"
+    >
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-14">
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
             Questions fréquentes
           </h2>
-          <p className="mt-4 text-lg text-gray-600 ">
-            Trouvez les réponses à vos questions. Si vous ne trouvez pas ce que vous cherchez, contactez-nous.
+          <p className="mt-4 text-lg text-gray-600">
+            Des réponses claires, sans blabla. Si vous avez un cas spécifique,
+            on vous répond sur WhatsApp.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
+            const buttonId = `${baseId}-faq-btn-${index}`;
+            const panelId = `${baseId}-faq-panel-${index}`;
             return (
-              <div
-                key={index}
-                className={`bg-white rounded-2xl transition-all duration-200 border ${isOpen ? 'border-green-500 shadow-md flex-col' : 'border-gray-200 hover:border-gray-300'
-                  }`}
-              >
+              <div key={faq.question} className="rounded-2xl">
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent rounded-2xl"
+                  id={buttonId}
+                  aria-controls={panelId}
                   aria-expanded={isOpen}
+                  className={`group flex w-full items-center justify-between gap-6 p-6 text-left rounded-2xl border transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                    isOpen
+                      ? "bg-white border-green-500 shadow-sm"
+                      : "bg-white border-gray-200 hover:border-gray-300"
+                  }`}
                 >
-                  <span className="text-lg font-semibold text-gray-900">
+                  <span className="text-lg font-semibold text-gray-900 leading-snug">
                     {faq.question}
                   </span>
-                  <span className={`ml-6 flex items-center justify-center w-8 h-8 rounded-full shrink-0 transition-colors ${isOpen ? 'bg-green-100 text-green-600' : 'bg-gray-100 text-gray-600'}`}>
-                    {isOpen ? <Minus className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
+                  <span
+                    className={`flex items-center justify-center w-10 h-10 rounded-full shrink-0 transition-colors ring-1 ${
+                      isOpen
+                        ? "bg-green-50 text-green-700 ring-green-200"
+                        : "bg-gray-50 text-gray-700 ring-gray-200 group-hover:bg-gray-100"
+                    }`}
+                    aria-hidden="true"
+                  >
+                    <ChevronDown
+                      className={`h-5 w-5 transition-transform duration-200 ${
+                        isOpen ? "rotate-180" : "rotate-0"
+                      }`}
+                    />
                   </span>
                 </button>
                 <div
-                  className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+                  id={panelId}
+                  role="region"
+                  aria-labelledby={buttonId}
+                  className={`grid transition-[grid-template-rows] duration-300 ease-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
                 >
-                  <p className="text-gray-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <div className="overflow-hidden">
+                    <div className="p-4">
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-10 rounded-3xl border border-gray-200 bg-white p-6 sm:p-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <div className="text-base font-extrabold text-gray-900">
+                Vous avez un cas spécifique ?
+              </div>
+              <div className="mt-1 text-sm text-gray-600">
+                Envoyez-nous un message, on vous répond rapidement.
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Link
+                href={buildWhatsAppLink({
+                  text: "Bonjour — j’ai une question à propos de Sley Agent.",
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm transition-colors"
+              >
+                <MessageCircle className="h-4 w-4" />
+                WhatsApp
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold ring-1 ring-gray-200 transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

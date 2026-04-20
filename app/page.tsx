@@ -1,9 +1,13 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import SocialProofSection from '@/components/SocialProofSection';
 import ProblemSection from '@/components/ProblemSection';
 import SolutionSection from '@/components/SolutionSection';
 import VisionSection from '@/components/VisionSection';
 import ProcessSection from '@/components/ProcessSection';
+import ReassuranceSection from '@/components/ReassuranceSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import FAQ from '@/components/FAQ';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
 
@@ -12,10 +16,14 @@ export default function Home() {
     <main className="min-h-screen bg-white selection:bg-green-200 text-gray-900">
       <Navbar />
       <Hero />
+      <SocialProofSection />
       <ProblemSection />
       <SolutionSection />
       <VisionSection />
       <ProcessSection />
+      <ReassuranceSection />
+      <TestimonialsSection />
+      <FAQ />
       <CtaSection />
       <Footer />
     </main>
