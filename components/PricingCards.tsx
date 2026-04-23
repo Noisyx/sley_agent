@@ -5,51 +5,21 @@ import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const tiers = [
   {
-    name: "Starter",
-    price: "29€",
-    description:
-      "L’essentiel pour répondre instantanément et ne plus laisser de prospects sans réponse.",
-    idealFor: "Solo / petite équipe",
-    features: [
-      "Connexion à WhatsApp Business",
-      "Réponses automatiques simples",
-      "Messages d’accueil optimisés",
-      "Configuration rapide (moins de 24h)",
-    ],
-    cta: "Commencer",
-    highlighted: false,
-  },
-  {
     name: "Pro",
     price: "79€",
     description:
-      "Le meilleur équilibre pour convertir automatiquement et gagner du temps au quotidien.",
+      "Le système complet pour convertir automatiquement et gagner du temps au quotidien.",
     idealFor: "Business en croissance",
     features: [
-      "Tout dans Starter",
+      "Connexion à WhatsApp Business",
+      "Configuration rapide (moins de 24h)",
       "Assistant intelligent (ton & offres)",
       "Qualification automatique des prospects",
       "Scénarios de vente optimisés",
       "Intégrations (n8n, CRM…)",
     ],
-    cta: "Choisir Pro",
+    cta: "Commencer",
     highlighted: true,
-  },
-  {
-    name: "Premium",
-    price: "199€",
-    description:
-      "Le système complet: automatisations sur mesure, optimisation continue et accompagnement VIP.",
-    idealFor: "Équipe / volume élevé",
-    features: [
-      "Tout dans Pro",
-      "Automatisations avancées sur mesure",
-      "Optimisation continue des performances",
-      "Suivi stratégique personnalisé",
-      "Support prioritaire",
-    ],
-    cta: "Parler à un expert",
-    highlighted: false,
   },
 ];
 
@@ -63,30 +33,30 @@ export default function PricingCards() {
         <div className="text-center mb-12 sm:mb-14">
           <div className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-green-700 ring-1 ring-green-200 shadow-sm">
             <Sparkles className="h-4 w-4" />
-            Des offres simples, prêtes à installer
+            Une offre simple, prête à installer
           </div>
           <h2 className="mt-6 text-3xl sm:text-4xl font-extrabold text-gray-900">
-            Choisissez l’offre adaptée à votre business
+            Boostez votre business avec notre offre unique
           </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
             Installation en moins de 24h. Messages optimisés. Support inclus.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 items-stretch max-w-6xl mx-auto">
+        <div className="flex justify-center max-w-lg mx-auto">
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`relative rounded-3xl bg-white border shadow-sm transition-transform duration-300 hover:-translate-y-1 motion-reduce:transform-none ${
+              className={`relative w-full rounded-3xl bg-white border shadow-sm transition-transform duration-300 hover:-translate-y-1 motion-reduce:transform-none ${
                 tier.highlighted
-                  ? "border-green-500 ring-2 ring-green-500/20 shadow-[0_24px_60px_-30px_rgba(16,185,129,0.35)] lg:-mt-4 lg:mb-4 z-10"
+                  ? "border-green-500 ring-2 ring-green-500/20 shadow-[0_24px_60px_-30px_rgba(16,185,129,0.35)] z-10"
                   : "border-gray-200 hover:border-gray-300"
               }`}
             >
               {tier.highlighted && (
                 <div className="absolute -top-3 left-6">
                   <span className="inline-flex items-center gap-2 rounded-full bg-green-600 text-white text-xs font-bold tracking-wide px-3 py-1 shadow-sm">
-                    Offre la plus populaire
+                    Offre Recommandée
                   </span>
                 </div>
               )}
