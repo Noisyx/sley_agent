@@ -9,17 +9,17 @@ const faqs = [
   {
     question: "Est-ce que ça marche pour mon business ?",
     answer:
-      "Oui. Que vous soyez artisan, e-commerçant, consultant ou restaurateur, Sley Agent s’adapte à votre activité. On configure ensemble les réponses, le ton et les scénarios pour coller à votre offre.",
+      "Oui. On configure vos réponses, vos prix, vos horaires et votre ton pour coller à votre activité.",
   },
   {
     question: "Combien de temps pour la mise en place ?",
     answer:
-      "En général moins de 24h. Après le choix de l’offre, on fait un court call de configuration, puis on vous guide pas à pas. Vous pouvez automatiser vos réponses très rapidement.",
+      "Généralement en moins de 24h. Vous nous donnez vos infos, on paramètre, et vous validez.",
   },
   {
     question: "Est-ce que je peux modifier les messages ?",
     answer:
-      "Oui. Vous pouvez ajuster les messages et scénarios à tout moment. On vous accompagne pour garder un ton cohérent et maximiser la conversion.",
+      "Oui. Vous gardez la main et on vous aide à garder un ton qui convertit.",
   },
   {
     question: "Est-ce que je peux changer d'offre en cours de route ?",
@@ -27,9 +27,19 @@ const faqs = [
       "Oui. Vous pouvez passer à une offre supérieure à tout moment, selon votre volume et vos besoins.",
   },
   {
+    question: "Transport / livraison : est-ce que l’agent peut prendre une réservation ?",
+    answer:
+      "Oui. Il peut confirmer une course, demander les infos utiles (lieu, heure, destination), et envoyer un récapitulatif au client.",
+  },
+  {
+    question: "Et si un client écrit la nuit ou le week-end ?",
+    answer:
+      "Il reçoit une réponse tout de suite. Vous ne perdez plus de clients à cause d’un message vu trop tard.",
+  },
+  {
     question: "Est-ce que vous proposez un accompagnement ?",
     answer:
-      "Oui. Nous vous accompagnons sur la mise en place, l’optimisation des scripts et l’amélioration continue (selon l’offre).",
+      "Oui. Mise en place incluse, puis optimisation continue selon votre offre.",
   },
 ];
 

@@ -1,9 +1,9 @@
 export default function SocialProofSection() {
   const items = [
-    { label: "Installation en 24h", value: "24h" },
-    { label: "Réponse instantanée", value: "< 2s" },
-    { label: "Support inclus", value: "Humain" },
-    { label: "Hébergement", value: "Europe" },
+    { label: "Mise en place", value: "24h" },
+    { label: "Réponse aux clients", value: "< 2s" },
+    { label: "Canal", value: "WhatsApp" },
+    { label: "Zone", value: "Togo & AO" },
   ];
 
   return (

@@ -7,7 +7,8 @@ export default function ProblemSection() {
         </svg>
       ),
       title: "Messages ignorés = clients perdus",
-      description: "Un prospect qui ne reçoit pas de réponse dans les 5 minutes a 80% de chances d'aller voir vos concurrents."
+      description:
+        "Quand un client écrit et n’a pas de réponse, il passe au concurrent. Résultat: vente perdue."
     },
     {
       icon: (
@@ -16,7 +17,8 @@ export default function ProblemSection() {
         </svg>
       ),
       title: "Réponses tardives = perte de confiance",
-      description: "Le délai de réponse est le premier critère de professionnalisme sur WhatsApp. Ne laissez pas votre image se dégrader."
+      description:
+        "Sur WhatsApp, la rapidité = sérieux. Si vous répondez trop tard, on vous prend moins au sérieux."
     },
     {
       icon: (
@@ -25,7 +27,8 @@ export default function ProblemSection() {
         </svg>
       ),
       title: "Trop de demandes = surcharge mentale",
-      description: "Passer votre journée à répondre aux mêmes questions vous empêche de vous concentrer sur le développement de votre activité."
+      description:
+        "Les mêmes questions toute la journée: prix, disponibilité, horaires… Vous perdez du temps au lieu de faire tourner le business."
     }
   ];
 

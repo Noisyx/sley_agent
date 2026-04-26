@@ -6,7 +6,7 @@ export default function VisionSection() {
           Imaginez...
         </h2>
         <p className="text-2xl md:text-4xl font-medium text-gray-900 leading-snug">
-          Vous recevez des messages toute la journée. Et chacun reçoit une réponse immédiate. Vos clients pensent que vous êtes ultra professionnel. <span className="text-green-600 font-bold">Pendant que tout est automatisé.</span>
+          Chaque client qui écrit reçoit une réponse tout de suite. Vous récupérez des ventes, vous gagnez du temps, et votre WhatsApp devient <span className="text-green-600 font-bold">un vrai canal de revenus</span>.
         </p>
       </div>
       

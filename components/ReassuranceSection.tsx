@@ -9,18 +9,18 @@ const blocks = [
   },
   {
     icon: ShieldCheck,
-    title: 'Solution fiable et sécurisée',
-    description: 'Vos données sont chiffrées et hébergées en Europe avec une disponibilité de 99.9%.',
+    title: 'Fiable au quotidien',
+    description: 'Vos clients reçoivent une réponse même quand vous êtes occupé, en route, ou fermé.',
   },
   {
     icon: Sliders,
-    title: '100% adaptable',
-    description: 'Une plateforme sur mesure qui s\'intègre avec vos outils du quotidien.',
+    title: 'Adapté à votre activité',
+    description: 'On configure vos prix, horaires, zones, règles et messages pour coller à votre réalité.',
   },
   {
     icon: Users,
     title: 'Accompagnement VIP',
-    description: 'Un expert dédié vous accompagne tout au long de votre croissance.',
+    description: 'On vous guide, on ajuste vos messages, et on optimise pour vendre plus.',
   },
 ];
 

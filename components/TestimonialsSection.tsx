@@ -1,16 +1,16 @@
 const testimonials = [
   {
-    name: "Dirigeant · E-commerce",
+    name: "Boutique · Lomé",
     quote:
       "On a divisé notre temps de réponse et surtout on ne perd plus les prospects quand l’équipe est occupée.",
   },
   {
-    name: "Gérante · Service",
+    name: "Vendeur · Instagram",
     quote:
       "L’assistant filtre les demandes et nous envoie uniquement les leads chauds. On gagne du temps et on vend plus sereinement.",
   },
   {
-    name: "Fondateur · Agence",
+    name: "Commerce · Afrique de l’Ouest",
     quote:
       "Mise en place rapide, réponses cohérentes avec notre ton. L’expérience client est devenue beaucoup plus fluide.",
   },

@@ -17,11 +17,11 @@ export default function Navbar() {
             </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
-            <Link
-              href="/#problem"
+          <Link
+              href="/#results"
               className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
             >
-              Problème
+              Résultats
             </Link>
             <Link
               href="/#solution"
@@ -29,11 +29,12 @@ export default function Navbar() {
             >
               Produit
             </Link>
+           
             <Link
-              href="/#process"
+              href="/#examples"
               className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
             >
-              Process
+              Exemples
             </Link>
             <Link
               href="/#faq"
@@ -72,13 +73,6 @@ export default function Navbar() {
           <div className="md:hidden pb-4">
             <div className="flex flex-col gap-2 rounded-2xl border border-gray-100 bg-white/90 backdrop-blur-md p-3 shadow-sm">
               <Link
-                href="/#problem"
-                onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
-              >
-                Problème
-              </Link>
-              <Link
                 href="/#solution"
                 onClick={() => setOpen(false)}
                 className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
@@ -86,11 +80,18 @@ export default function Navbar() {
                 Produit
               </Link>
               <Link
-                href="/#process"
+                href="/#results"
                 onClick={() => setOpen(false)}
                 className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
               >
-                Process
+                Résultats
+              </Link>
+              <Link
+                href="/#examples"
+                onClick={() => setOpen(false)}
+                className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
+              >
+                Exemples
               </Link>
               <Link
                 href="/#faq"

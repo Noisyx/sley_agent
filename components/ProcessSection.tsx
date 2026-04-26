@@ -8,7 +8,7 @@ export default function ProcessSection() {
     {
       number: "2",
       title: "Personnalisez votre assistant",
-      description: "Donnez-lui vos informations, vos prix et le ton de votre marque."
+      description: "On configure vos produits, prix, zones de livraison, horaires et réponses fréquentes."
     },
     {
       number: "3",

@@ -7,7 +7,8 @@ export default function SolutionSection() {
         </svg>
       ),
       title: "Répond en moins de 2 secondes",
-      description: "Ne faites plus attendre personne. L'IA saisit l'opportunité au moment exact où le client est prêt à acheter."
+      description:
+        "Vos clients obtiennent une réponse tout de suite: vous récupérez des ventes au lieu de les laisser partir."
     },
     {
       icon: (
@@ -16,7 +17,8 @@ export default function SolutionSection() {
         </svg>
       ),
       title: "Qualifie automatiquement les prospects",
-      description: "L'assistant pose les questions clés pour filtrer les curieux et identifier vos meilleurs futurs clients."
+      description:
+        "Il pose les bonnes questions (besoin, lieu, quantité, budget) pour vous envoyer les demandes sérieuses."
     },
     {
       icon: (
@@ -25,7 +27,8 @@ export default function SolutionSection() {
         </svg>
       ),
       title: "Transforme les conversations en ventes",
-      description: "Plus qu'un support, c'est un commercial infatigable qui guide vos prospects vers le paiement."
+      description:
+        "Il guide le client vers la prochaine étape: commande, réservation, devis ou paiement."
     }
   ];
 
@@ -212,7 +215,7 @@ export default function SolutionSection() {
           {/* Right: Content */}
           <div className="w-full lg:w-1/2">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Pendant que vous travaillez... ou dormez, votre assistant <span className="text-green-600">répond instantanément</span> à chaque client.
+              Pendant que vous travaillez (ou dormez), votre assistant <span className="text-green-600">répond et vend</span> sur WhatsApp.
             </h2>
 
             <div className="space-y-8 mt-12">
