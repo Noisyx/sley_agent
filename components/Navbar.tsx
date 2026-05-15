@@ -12,29 +12,29 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-2xl font-bold text-gray-900">
-              SLEY AGENT
+            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-zinc-900">
+              <img src="/logo.jpeg" alt="SLEY AI Logo" className="w-10 h-10 object-contain" />
+              SLEY AI
             </Link>
           </div>
           <div className="hidden md:flex space-x-8 items-center">
-          <Link
-              href="/#results"
-              className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
-            >
-              Résultats
-            </Link>
             <Link
               href="/#solution"
               className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
             >
               Produit
             </Link>
-           
             <Link
-              href="/#examples"
+              href="/#demos"
               className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
             >
-              Exemples
+              Démos
+            </Link>
+            <Link
+              href="/#pricing"
+              className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+            >
+              Tarifs
             </Link>
             <Link
               href="/#faq"
@@ -42,17 +42,11 @@ export default function Navbar() {
             >
               FAQ
             </Link>
-            <Link
-              href="/offres"
-              className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
-            >
-              Offres
-            </Link>
           </div>
           <div className="flex items-center">
             <Link
               href="/#start"
-              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-green-600 hover:bg-green-700 shadow-sm hover:shadow transition-all"
+              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-[#128C7E] hover:bg-[#075E54] shadow-sm hover:shadow transition-all"
             >
               Démarrer
             </Link>
@@ -80,18 +74,18 @@ export default function Navbar() {
                 Produit
               </Link>
               <Link
-                href="/#results"
+                href="/#demos"
                 onClick={() => setOpen(false)}
                 className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
               >
-                Résultats
+                Démos
               </Link>
               <Link
-                href="/#examples"
+                href="/#pricing"
                 onClick={() => setOpen(false)}
                 className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
               >
-                Exemples
+                Tarifs
               </Link>
               <Link
                 href="/#faq"
@@ -110,7 +104,7 @@ export default function Navbar() {
               <Link
                 href="/#start"
                 onClick={() => setOpen(false)}
-                className="mt-1 inline-flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-white bg-green-600 hover:bg-green-700"
+                className="mt-1 inline-flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-white bg-[#128C7E] hover:bg-[#075E54]"
               >
                 Démarrer
               </Link>

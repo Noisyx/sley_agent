@@ -8,8 +8,11 @@ export default function Footer() {
         <div className="py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <div>
-              <div className="text-lg font-extrabold text-gray-900">
-                SLEY AGENT
+              <div className="flex items-center gap-2">
+                <img src="/logo.jpeg" alt="SLEY AI Logo" className="w-8 h-8 object-contain" />
+                <div className="text-lg font-extrabold text-gray-900">
+                  SLEY AI
+                </div>
               </div>
               <div className="text-sm text-gray-500">
                 Agent IA WhatsApp 24/7
@@ -30,12 +33,6 @@ export default function Footer() {
             >
               Confidentialité
             </Link>
-            <Link
-              href="/contact"
-              className="text-gray-600 hover:text-green-700 transition-colors"
-            >
-              Contact
-            </Link>
           </div>
         </div>
 
@@ -49,7 +46,7 @@ export default function Footer() {
             </a>
             <span className="hidden sm:inline text-gray-300">•</span>
             <Link
-              href={buildWhatsAppLink({ text: "Bonjour — je veux une démo Sley Agent." })}
+              href={buildWhatsAppLink({ text: "Bonjour — je veux une démo Sley AI." })}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold ring-1 ring-gray-200 transition-colors"

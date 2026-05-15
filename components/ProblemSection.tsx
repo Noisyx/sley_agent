@@ -1,61 +1,69 @@
+import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
+import { MessageSquareWarning, Moon, TimerOff, Frown } from "lucide-react";
+
 export default function ProblemSection() {
-  const problems = [
-    {
-      icon: (
-        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-red-400">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"></path>
-        </svg>
-      ),
-      title: "Messages ignorés = clients perdus",
-      description:
-        "Quand un client écrit et n’a pas de réponse, il passe au concurrent. Résultat: vente perdue."
-    },
-    {
-      icon: (
-        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-orange-400">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-      ),
-      title: "Réponses tardives = perte de confiance",
-      description:
-        "Sur WhatsApp, la rapidité = sérieux. Si vous répondez trop tard, on vous prend moins au sérieux."
-    },
-    {
-      icon: (
-        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-yellow-400">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
-        </svg>
-      ),
-      title: "Trop de demandes = surcharge mentale",
-      description:
-        "Les mêmes questions toute la journée: prix, disponibilité, horaires… Vous perdez du temps au lieu de faire tourner le business."
-    }
-  ];
-
   return (
-    <section id="problem" className="bg-[#0a1913] py-24">
+    <section id="problem" className="py-24 bg-gray-50 overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Vos clients vous écrivent<br />tous les jours.
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl">
-            Mais entre les occupations, les oublis et les retards... vous perdez des ventes sans même vous en rendre compte.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {problems.map((problem, index) => (
-            <div key={index} className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-colors">
-              <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 border border-white/10">
-                {problem.icon}
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-zinc-900 mb-8 leading-tight">
+              Vos journées ressemblent-elles à <span className="text-orange-500">ça ?</span>
+            </h2>
+            <div className="space-y-6 text-lg text-gray-700">
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                  <MessageSquareWarning className="w-6 h-6" />
+                </div>
+                <p>
+                  Vous recevez <strong>50 fois par jour</strong> : <em>"Où êtes-vous ?"</em> ou <em>"C'est combien ?"</em>.
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{problem.title}</h3>
-              <p className="text-gray-400 leading-relaxed">
-                {problem.description}
-              </p>
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                  <Moon className="w-6 h-6" />
+                </div>
+                <p>
+                  Vous <strong>perdez des ventes</strong> la nuit pendant votre sommeil.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                  <TimerOff className="w-6 h-6" />
+                </div>
+                <p>
+                  Vous êtes <strong>débordé</strong> et laissez filer des clients chez la concurrence.
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                  <Frown className="w-6 h-6" />
+                </div>
+                <p>
+                  Vous perdez du temps avec des curieux qui <strong>n'achètent rien</strong>.
+                </p>
+              </div>
             </div>
-          ))}
+          </div>
+          
+          <div className="w-full lg:w-1/2 relative">
+            <div
+              aria-hidden="true"
+              className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-orange-200/40 via-orange-100/10 to-transparent blur-2xl"
+            />
+            <div className="relative overflow-hidden rounded-[2.75rem] border border-gray-100 bg-white shadow-xl transition-transform duration-500 hover:-translate-y-2">
+              <div className="relative aspect-[4/3] w-full">
+                <Image
+                  src={withBasePath("/problem.png")}
+                  alt="Gérant débordé par les messages WhatsApp"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

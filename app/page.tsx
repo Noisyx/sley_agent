@@ -1,25 +1,29 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import SocialProofSection from '@/components/SocialProofSection';
-import CaseStudySection from '@/components/CaseStudySection';
+import ProblemSection from '@/components/ProblemSection';
 import SolutionSection from '@/components/SolutionSection';
-import ExamplesSection from '@/components/ExamplesSection';
+import FeaturesSection from '@/components/FeaturesSection';
+import TargetAudienceSection from '@/components/TargetAudienceSection';
+import PricingSection from '@/components/PricingSection';
 import FAQ from '@/components/FAQ';
 import CtaSection from '@/components/CtaSection';
 import Footer from '@/components/Footer';
+import StickyCTA from '@/components/StickyCTA';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white selection:bg-green-200 text-gray-900">
+    <main className="overflow-x-hidden min-h-screen bg-white selection:bg-green-200 text-gray-900 pb-16 md:pb-0">
       <Navbar />
       <Hero />
-      {/* <SocialProofSection /> */}
-      <CaseStudySection />
+      <ProblemSection />
       <SolutionSection />
-      <ExamplesSection />
+      <FeaturesSection />
+      <TargetAudienceSection />
+      <PricingSection />
       <FAQ />
       <CtaSection />
       <Footer />
+      <StickyCTA />
     </main>
   );
 }

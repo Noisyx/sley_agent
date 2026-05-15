@@ -7,39 +7,19 @@ import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 const faqs = [
   {
-    question: "Est-ce que ça marche pour mon business ?",
+    question: "Mon numéro WhatsApp peut-il être banni ?",
     answer:
-      "Oui. On configure vos réponses, vos prix, vos horaires et votre ton pour coller à votre activité.",
+      "Non. Nous utilisons l'API officielle WhatsApp Business — votre numéro est protégé et conforme aux règles de Meta.",
   },
   {
     question: "Combien de temps pour la mise en place ?",
     answer:
-      "Généralement en moins de 24h. Vous nous donnez vos infos, on paramètre, et vous validez.",
+      "Moins de 24h. Vous nous donnez vos infos (produits, prix, horaires), on configure, et vous validez avant la mise en ligne.",
   },
   {
-    question: "Est-ce que je peux modifier les messages ?",
+    question: "Que se passe-t-il si je ne suis pas satisfait ?",
     answer:
-      "Oui. Vous gardez la main et on vous aide à garder un ton qui convertit.",
-  },
-  {
-    question: "Est-ce que je peux changer d'offre en cours de route ?",
-    answer:
-      "Oui. Vous pouvez passer à une offre supérieure à tout moment, selon votre volume et vos besoins.",
-  },
-  {
-    question: "Transport / livraison : est-ce que l’agent peut prendre une réservation ?",
-    answer:
-      "Oui. Il peut confirmer une course, demander les infos utiles (lieu, heure, destination), et envoyer un récapitulatif au client.",
-  },
-  {
-    question: "Et si un client écrit la nuit ou le week-end ?",
-    answer:
-      "Il reçoit une réponse tout de suite. Vous ne perdez plus de clients à cause d’un message vu trop tard.",
-  },
-  {
-    question: "Est-ce que vous proposez un accompagnement ?",
-    answer:
-      "Oui. Mise en place incluse, puis optimisation continue selon votre offre.",
+      "Vous avez 7 jours d'essai gratuit, sans engagement. Si ça ne vous convient pas, vous ne payez rien.",
   },
 ];
 
@@ -50,17 +30,16 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-50"
       aria-label="Questions fréquentes"
     >
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-zinc-900 sm:text-4xl">
             Questions fréquentes
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Des réponses claires, sans blabla. Si vous avez un cas spécifique,
-            on vous répond sur WhatsApp.
+          <p className="mt-4 text-lg text-zinc-600 leading-relaxed">
+            Des réponses claires, sans blabla. Une autre question ? On vous répond sur WhatsApp.
           </p>
         </div>
 
@@ -76,20 +55,20 @@ export default function FAQ() {
                   id={buttonId}
                   aria-controls={panelId}
                   aria-expanded={isOpen}
-                  className={`group flex w-full items-center justify-between gap-6 p-6 text-left rounded-2xl border transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  className={`group flex w-full items-center justify-between gap-6 p-6 text-left rounded-2xl border transition-colors focus:outline-none focus:ring-2 focus:ring-[#128C7E] ${
                     isOpen
-                      ? "bg-white border-green-500 shadow-sm"
-                      : "bg-white border-gray-200 hover:border-gray-300"
+                      ? "bg-white border-[#128C7E] shadow-sm shadow-zinc-200/50"
+                      : "bg-white border-zinc-200 hover:border-zinc-300"
                   }`}
                 >
-                  <span className="text-lg font-semibold text-gray-900 leading-snug">
+                  <span className="text-lg font-semibold text-zinc-900 leading-snug">
                     {faq.question}
                   </span>
                   <span
                     className={`flex items-center justify-center w-10 h-10 rounded-full shrink-0 transition-colors ring-1 ${
                       isOpen
-                        ? "bg-green-50 text-green-700 ring-green-200"
-                        : "bg-gray-50 text-gray-700 ring-gray-200 group-hover:bg-gray-100"
+                        ? "bg-green-50 text-[#128C7E] ring-green-200"
+                        : "bg-zinc-50 text-zinc-700 ring-zinc-200 group-hover:bg-zinc-100"
                     }`}
                     aria-hidden="true"
                   >
@@ -110,7 +89,7 @@ export default function FAQ() {
                 >
                   <div className="overflow-hidden">
                     <div className="p-4">
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-zinc-600 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
@@ -121,35 +100,27 @@ export default function FAQ() {
           })}
         </div>
 
-        <div className="mt-10 rounded-3xl border border-gray-200 bg-white p-6 sm:p-8">
+        <div className="mt-10 rounded-3xl border border-zinc-200 bg-white p-6 sm:p-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="text-base font-extrabold text-gray-900">
+              <div className="text-base font-extrabold text-zinc-900">
                 Vous avez un cas spécifique ?
               </div>
-              <div className="mt-1 text-sm text-gray-600">
+              <div className="mt-1 text-sm text-zinc-600">
                 Envoyez-nous un message, on vous répond rapidement.
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                href={buildWhatsAppLink({
-                  text: "Bonjour — j’ai une question à propos de Sley Agent.",
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-green-600 hover:bg-green-700 text-white font-semibold shadow-sm transition-colors"
-              >
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-gray-50 hover:bg-gray-100 text-gray-800 font-semibold ring-1 ring-gray-200 transition-colors"
-              >
-                Contact
-              </Link>
-            </div>
+            <Link
+              href={buildWhatsAppLink({
+                text: "Bonjour — j'ai une question à propos de Sley AI.",
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#128C7E] hover:bg-[#075E54] text-white font-semibold shadow-sm transition-colors"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Poser ma question sur WhatsApp
+            </Link>
           </div>
         </div>
       </div>

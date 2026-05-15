@@ -30,7 +30,7 @@ export default function CtaSection() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href={buildWhatsAppLink({
-                  text: "Bonjour — je veux installer Sley Agent (mise en place en 24h).",
+                  text: "Bonjour — je veux installer Sley AI (mise en place en 24h).",
                 })}
                 target="_blank"
                 rel="noopener noreferrer"
