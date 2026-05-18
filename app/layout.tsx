@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sley AI — Agent IA WhatsApp qui convertit 24/7",
-    template: "%s — Sley AI",
+    default: "SLEY AI — Agent IA WhatsApp qui convertit 24/7",
+    template: "%s — SLEY AI",
   },
   description:
-    "Automatisez vos réponses WhatsApp, qualifiez vos prospects et convertissez vos clients 24h/24. Installation en moins de 24h, sans effort.",
+    "Automatisez vos réponses WhatsApp, qualifiez vos prospects et convertissez vos clients 24h/24. Solution IA 100% africaine",
 };
 
 export default function RootLayout({
