@@ -10,7 +10,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2">
                 <img src="/logo.jpeg" alt="SLEY AI Logo" className="w-8 h-8 object-contain" />
-                <div className="text-lg font-extrabold text-gray-900">
+                <div className="text-lg font-extrabold text-[#128C7E]">
                   SLEY AI
                 </div>
               </div>

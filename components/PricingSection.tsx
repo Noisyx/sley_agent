@@ -17,8 +17,8 @@ export default function PricingSection() {
 
         <div className="max-w-md mx-auto bg-white rounded-[2.5rem] shadow-xl shadow-zinc-200/50 overflow-hidden border border-zinc-100">
           <div className="bg-[#128C7E] px-8 py-4 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1 text-sm font-semibold text-white mb-2">
-              <Gift className="w-4 h-4" /> 7 Jours d'Essai Gratuit
+            <span className="inline-flex items-center gap-2 rounded-full bg-orange-500/20 px-4 py-1 text-sm font-semibold text-white mb-2">
+              <Gift className="w-4 h-4" /> 30 Jours d'Essai Gratuit
             </span>
             <p className="text-green-50 text-sm font-medium">Sans aucun engagement</p>
           </div>

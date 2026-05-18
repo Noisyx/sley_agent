@@ -25,7 +25,7 @@ export default function ProblemSection() {
                   <Moon className="w-6 h-6" />
                 </div>
                 <p>
-                  Vous <strong>perdez des ventes</strong> la nuit pendant votre sommeil.
+                  Vous <strong>perdez des clients et des ventes</strong> pendant votre repos.
                 </p>
               </div>
               <div className="flex items-start gap-4">
@@ -41,12 +41,12 @@ export default function ProblemSection() {
                   <Frown className="w-6 h-6" />
                 </div>
                 <p>
-                  Vous perdez du temps avec des curieux qui <strong>n'achètent rien</strong>.
+                  Vous perdez du temps avec des prospects qui <strong>n'achètent rien</strong>.
                 </p>
               </div>
             </div>
           </div>
-          
+
           <div className="w-full lg:w-1/2 relative">
             <div
               aria-hidden="true"
@@ -55,7 +55,7 @@ export default function ProblemSection() {
             <div className="relative overflow-hidden rounded-[2.75rem] border border-gray-100 bg-white shadow-xl transition-transform duration-500 hover:-translate-y-2">
               <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src={withBasePath("/problem.png")}
+                  src={withBasePath("/problem.jpg")}
                   alt="Gérant débordé par les messages WhatsApp"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"

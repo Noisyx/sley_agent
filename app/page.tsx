@@ -21,7 +21,6 @@ export default function Home() {
       <TargetAudienceSection />
       <PricingSection />
       <FAQ />
-      <CtaSection />
       <Footer />
       <StickyCTA />
     </main>
