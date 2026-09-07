@@ -22,16 +22,28 @@ export default function Footer() {
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm">
             <Link
-              href="/mentions-legales"
-              className="text-muted hover:text-primary-hover transition-colors"
-            >
-              Mentions légales
-            </Link>
-            <Link
               href="/confidentialite"
               className="text-muted hover:text-primary-hover transition-colors"
             >
               Confidentialité
+            </Link>
+            <Link
+              href="/cgu"
+              className="text-muted hover:text-primary-hover transition-colors"
+            >
+              CGU
+            </Link>
+            <Link
+              href="/suppression-donnees"
+              className="text-muted hover:text-primary-hover transition-colors"
+            >
+              Suppression des données
+            </Link>
+            <Link
+              href="/mentions-legales"
+              className="text-muted hover:text-primary-hover transition-colors"
+            >
+              Mentions légales
             </Link>
           </div>
         </div>
@@ -39,10 +51,10 @@ export default function Footer() {
         <div className="border-t border-border py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-3 text-sm text-muted">
             <a
-              href="mailto:contact@sley.group"
+              href="mailto:contact@daana.tech"
               className="hover:text-primary-hover transition-colors"
             >
-              contact@sley.group
+              contact@daana.tech
             </a>
             <span className="hidden sm:inline text-border">•</span>
             <Link
@@ -55,7 +67,7 @@ export default function Footer() {
             </Link>
           </div>
           <p className="text-sm text-muted">
-            &copy; {new Date().getFullYear()} Meta Web Solutions. Tous droits
+            &copy; {new Date().getFullYear()} METAWEB SOLUTION / Daana Tech. Tous droits
             réservés.
           </p>
         </div>
