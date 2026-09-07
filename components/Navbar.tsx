@@ -8,11 +8,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-[#128C7E]">
+            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-primary">
               <img src="/logo.jpeg" alt="SLEY AI Logo" className="w-10 h-10 object-contain" />
               SLEY AI
             </Link>
@@ -20,25 +20,25 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-8 items-center">
             <Link
               href="/#solution"
-              className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+              className="text-sm font-medium text-muted hover:text-primary transition-colors"
             >
               Produit
             </Link>
             <Link
               href="/#demos"
-              className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+              className="text-sm font-medium text-muted hover:text-primary transition-colors"
             >
               Démos
             </Link>
             <Link
               href="/#pricing"
-              className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+              className="text-sm font-medium text-muted hover:text-primary transition-colors"
             >
               Tarifs
             </Link>
             <Link
               href="/#faq"
-              className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+              className="text-sm font-medium text-muted hover:text-primary transition-colors"
             >
               FAQ
             </Link>
@@ -46,14 +46,14 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link
               href="/#start"
-              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-[#128C7E] hover:bg-[#075E54] shadow-sm hover:shadow transition-all"
+              className="hidden md:inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-primary hover:bg-primary-hover shadow-sm hover:shadow transition-all"
             >
               Démarrer
             </Link>
 
             <button
               type="button"
-              className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-full border border-gray-200 bg-white/70 hover:bg-white transition-colors text-gray-700"
+              className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-full border border-border bg-surface/70 hover:bg-surface transition-colors text-muted"
               aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
               aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
@@ -65,46 +65,46 @@ export default function Navbar() {
 
         {open && (
           <div className="md:hidden pb-4">
-            <div className="flex flex-col gap-2 rounded-2xl border border-gray-100 bg-white/90 backdrop-blur-md p-3 shadow-sm">
+            <div className="flex flex-col gap-2 rounded-2xl border border-border bg-surface/90 backdrop-blur-md p-3 shadow-sm">
               <Link
                 href="/#solution"
                 onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
+                className="px-3 py-3 rounded-xl text-sm font-medium text-muted hover:bg-background"
               >
                 Produit
               </Link>
               <Link
                 href="/#demos"
                 onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
+                className="px-3 py-3 rounded-xl text-sm font-medium text-muted hover:bg-background"
               >
                 Démos
               </Link>
               <Link
                 href="/#pricing"
                 onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
+                className="px-3 py-3 rounded-xl text-sm font-medium text-muted hover:bg-background"
               >
                 Tarifs
               </Link>
               <Link
                 href="/#faq"
                 onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
+                className="px-3 py-3 rounded-xl text-sm font-medium text-muted hover:bg-background"
               >
                 FAQ
               </Link>
               <Link
-                href="/offres"
+                href="/#pricing"
                 onClick={() => setOpen(false)}
-                className="px-3 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50"
+                className="px-3 py-3 rounded-xl text-sm font-medium text-muted hover:bg-background"
               >
                 Offres
               </Link>
               <Link
                 href="/#start"
                 onClick={() => setOpen(false)}
-                className="mt-1 inline-flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-white bg-[#128C7E] hover:bg-[#075E54]"
+                className="mt-1 inline-flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-white bg-primary hover:bg-primary-hover"
               >
                 Démarrer
               </Link>

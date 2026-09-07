@@ -12,9 +12,19 @@ const faqs = [
       "Non. Nous utilisons l'API officielle WhatsApp Business — votre numéro est protégé et conforme aux règles de Meta.",
   },
   {
+    question: "Quelle est la différence entre Essential et Pro ?",
+    answer:
+      "Essential digitalise et automatise vos processus WhatsApp (parcours, catalogue, commandes). Pro reprend Essential et ajoute un assistant commercial IA disponible 24h/24, adapté à votre métier.",
+  },
+  {
+    question: "Pour qui est SLEY ?",
+    answer:
+      "Pour les restaurants et les agences de transport et livraison de colis.",
+  },
+  {
     question: "Combien de temps pour la mise en place ?",
     answer:
-      "Moins de 02 semaines. Vous nous donnez vos infos (produits, prix, horaires), on configure, et vous validez avant la mise en ligne.",
+      "Moins de 02 semaines. Vous nous donnez vos infos (offre, prix, horaires), on configure, et vous validez avant la mise en ligne.",
   },
   {
     question: "Que se passe-t-il si je ne suis pas satisfait ?",
@@ -30,15 +40,15 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-zinc-50"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-background"
       aria-label="Questions fréquentes"
     >
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-extrabold text-zinc-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
             Questions fréquentes
           </h2>
-          <p className="mt-4 text-lg text-zinc-600 leading-relaxed">
+          <p className="mt-4 text-lg text-muted leading-relaxed">
             Des réponses claires, sans blabla. Une autre question ? On vous répond sur WhatsApp.
           </p>
         </div>
@@ -55,18 +65,18 @@ export default function FAQ() {
                   id={buttonId}
                   aria-controls={panelId}
                   aria-expanded={isOpen}
-                  className={`group flex w-full items-center justify-between gap-6 p-6 text-left rounded-2xl border transition-colors focus:outline-none focus:ring-2 focus:ring-[#128C7E] ${isOpen
-                    ? "bg-white border-[#128C7E] shadow-sm shadow-zinc-200/50"
-                    : "bg-white border-zinc-200 hover:border-zinc-300"
+                  className={`group flex w-full items-center justify-between gap-6 p-6 text-left rounded-2xl border transition-colors focus:outline-none focus:ring-2 focus:ring-primary ${isOpen
+                    ? "bg-surface border-primary shadow-sm shadow-foreground/5"
+                    : "bg-surface border-border hover:border-border-strong"
                     }`}
                 >
-                  <span className="text-lg font-semibold text-zinc-900 leading-snug">
+                  <span className="text-lg font-semibold text-foreground leading-snug">
                     {faq.question}
                   </span>
                   <span
                     className={`flex items-center justify-center w-10 h-10 rounded-full shrink-0 transition-colors ring-1 ${isOpen
-                      ? "bg-green-50 text-[#128C7E] ring-green-200"
-                      : "bg-zinc-50 text-zinc-700 ring-zinc-200 group-hover:bg-zinc-100"
+                      ? "bg-primary-subtle text-primary ring-primary/25"
+                      : "bg-background text-foreground ring-border group-hover:bg-surface-muted"
                       }`}
                     aria-hidden="true"
                   >
@@ -85,7 +95,7 @@ export default function FAQ() {
                 >
                   <div className="overflow-hidden">
                     <div className="p-4">
-                      <p className="text-zinc-600 leading-relaxed">
+                      <p className="text-muted leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
@@ -96,13 +106,13 @@ export default function FAQ() {
           })}
         </div>
 
-        <div className="mt-10 rounded-3xl border border-zinc-200 bg-white p-6 sm:p-8">
+        <div className="mt-10 rounded-3xl border border-border bg-surface p-6 sm:p-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="text-base font-extrabold text-zinc-900">
+              <div className="text-base font-extrabold text-foreground">
                 Vous avez un cas spécifique ?
               </div>
-              <div className="mt-1 text-sm text-zinc-600">
+              <div className="mt-1 text-sm text-muted">
                 Envoyez-nous un message, on vous répond rapidement.
               </div>
             </div>
@@ -112,7 +122,7 @@ export default function FAQ() {
               })}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-[#128C7E] hover:bg-[#075E54] text-white font-semibold shadow-sm transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary hover:bg-primary-hover text-white font-semibold shadow-sm transition-colors"
             >
               <MessageCircle className="h-4 w-4" />
               Poser ma question

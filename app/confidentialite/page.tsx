@@ -7,22 +7,22 @@ export const metadata = {
 
 export default function ConfidentialitePage() {
   return (
-    <main className="min-h-screen bg-white pt-28 pb-16">
+    <main className="min-h-screen bg-surface pt-28 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link href="/" className="text-sm font-medium text-green-700">
+          <Link href="/" className="text-sm font-medium text-primary">
             ← Retour à l’accueil
           </Link>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-6">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-6">
           Politique de confidentialité
         </h1>
-        <div className="max-w-none text-black">
+        <div className="max-w-none text-foreground">
           <p>
             La présente politique décrit comment les données personnelles sont
             traitées lorsque vous utilisez ce site.
           </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-muted">
             Dernière mise à jour: 27 avril 2026
           </p>
 

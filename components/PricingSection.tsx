@@ -1,64 +1,109 @@
 import Link from "next/link";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
-import { Gift } from "lucide-react";
+import { Check, Gift } from "lucide-react";
+
+const packs = [
+  {
+    name: "Essential",
+    price: "45 000",
+    tagline: "Digitalisation et automatisation WhatsApp",
+    features: [
+      "Parcours WhatsApp automatisés",
+      "Catalogue et prix",
+      "Prise de commandes",
+      "Passage à l'humain si besoin",
+    ],
+    cta: "Découvrir Essential",
+    message:
+      "Bonjour, je suis intéressé par le Pack Essential (45 000 FCFA / mois) et l'essai de 30 jours.",
+    highlighted: false,
+  },
+  {
+    name: "Pro",
+    price: "65 000",
+    tagline: "Essential + assistant commercial IA 24/7",
+    features: [
+      "Tout le Pack Essential",
+      "Assistant commercial IA 24/7",
+      "Adapté à votre métier",
+      "Réponses naturelles, jour et nuit",
+    ],
+    cta: "Découvrir Pro",
+    message:
+      "Bonjour, je suis intéressé par le Pack Pro (65 000 FCFA / mois) et l'essai de 30 jours.",
+    highlighted: true,
+  },
+];
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="py-24 bg-gray-50 border-t border-gray-100 relative overflow-hidden">
+    <section id="pricing" className="py-24 bg-background border-t border-border relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-zinc-900 mb-4">
-            Un employé parfait, pour le prix d'un abonnement internet.
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+            Deux packs, un WhatsApp métier.
           </h2>
-          <p className="text-xl text-zinc-600 max-w-2xl mx-auto leading-relaxed">
-            Pas d'investissement énorme. Nous configurons l'assistant pour vous, et vous payez un petit abonnement mensuel.
+          <p className="text-xl text-muted max-w-2xl mx-auto leading-relaxed">
+            Digitalisez vos processus sur WhatsApp. Ajoutez un assistant commercial 24/7 quand vous en avez besoin.
           </p>
         </div>
 
-        <div className="max-w-md mx-auto bg-white rounded-[2.5rem] shadow-xl shadow-zinc-200/50 overflow-hidden border border-zinc-100">
-          <div className="bg-[#128C7E] px-8 py-4 text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-orange-500/20 px-4 py-1 text-sm font-semibold text-white mb-2">
-              <Gift className="w-4 h-4" /> 30 Jours d'Essai Gratuit
-            </span>
-            <p className="text-green-50 text-sm font-medium">Sans aucun engagement</p>
-          </div>
+        <div className="flex justify-center mb-10">
+          <span className="inline-flex items-center gap-2 rounded-full bg-primary-subtle px-4 py-1.5 text-sm font-semibold text-primary">
+            <Gift className="w-4 h-4" /> 30 jours d&apos;essai gratuit — sans engagement
+          </span>
+        </div>
 
-          <div className="p-8 sm:p-10 text-center">
-            <div className="text-zinc-500 mb-2 font-medium uppercase tracking-wide">À partir de</div>
-            <div className="flex flex-col items-center justify-center mb-6">
-              <div className="flex items-center text-5xl font-extrabold text-zinc-900">
-                15 000 <span className="text-2xl text-zinc-500 ml-2 font-semibold">FCFA / mois</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {packs.map((pack) => (
+            <div
+              key={pack.name}
+              className={`bg-surface rounded-[2.5rem] overflow-hidden border ${
+                pack.highlighted
+                  ? "border-primary shadow-xl shadow-primary/10"
+                  : "border-border shadow-xl shadow-foreground/5"
+              }`}
+            >
+              {pack.highlighted && (
+                <div className="bg-primary px-8 py-3 text-center">
+                  <p className="text-inverse text-sm font-semibold">Pack recommandé</p>
+                </div>
+              )}
+
+              <div className="p-8 sm:p-10">
+                <div className="text-sm font-bold uppercase tracking-wide text-primary mb-2">
+                  Pack {pack.name}
+                </div>
+                <p className="text-muted mb-6 leading-relaxed">{pack.tagline}</p>
+                <div className="flex items-baseline gap-2 mb-8">
+                  <span className="text-4xl font-extrabold text-foreground">{pack.price}</span>
+                  <span className="text-muted font-semibold">FCFA / mois</span>
+                </div>
+
+                <ul className="space-y-4 mb-10 text-left text-muted">
+                  {pack.features.map((feature) => (
+                    <li key={feature} className="flex items-start">
+                      <Check className="w-5 h-5 text-primary mr-3 shrink-0 mt-0.5" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href={buildWhatsAppLink({ text: pack.message })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-full block py-4 px-6 text-center font-bold text-lg rounded-xl transition-transform hover:-translate-y-1 ${
+                    pack.highlighted
+                      ? "bg-primary hover:bg-primary-hover text-white shadow-lg shadow-primary/20"
+                      : "bg-background hover:bg-surface-muted text-foreground ring-1 ring-border"
+                  }`}
+                >
+                  {pack.cta}
+                </Link>
               </div>
             </div>
-
-            <ul className="space-y-4 mb-10 text-left text-zinc-600">
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#25D366] mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                Réponses instantanées 24/7
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#25D366] mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                Présentation catalogue & prix
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#25D366] mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                Prise de commandes
-              </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 text-[#25D366] mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
-                Passage à l'humain si besoin
-              </li>
-            </ul>
-
-            <Link
-              href={buildWhatsAppLink({ text: "Bonjour, je suis intéressé par l'essai gratuit de 7 jours de Sley AI." })}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block py-4 px-6 bg-[#128C7E] hover:bg-[#075E54] text-white font-bold text-lg rounded-xl shadow-lg shadow-[#128C7E]/20 transition-transform hover:-translate-y-1"
-            >
-              Commencer mon essai gratuit
-            </Link>
-          </div>
+          ))}
         </div>
       </div>
     </section>

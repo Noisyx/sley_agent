@@ -4,7 +4,7 @@ export default function SolutionSection() {
   const benefits = [
     {
       icon: (
-        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-[#25D366]">
+        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-primary">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
         </svg>
       ),
@@ -14,37 +14,37 @@ export default function SolutionSection() {
     },
     {
       icon: (
-        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-[#25D366]">
+        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-primary">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"></path>
         </svg>
       ),
-      title: "Présente et Qualifie",
+      title: "Présente votre offre",
       description:
-        "L'agent affiche vos prix, présente vos articles et filtre les curieux."
+        "Le parcours affiche vos prix, présente vos articles et oriente le client."
     },
     {
       icon: (
-        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-[#25D366]">
+        <svg fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6 text-primary">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
         </svg>
       ),
       title: "Prend la commande",
       description:
-        "Il calcule le total avec la livraison et demande le paiement Mobile Money."
+        "Le total est calculé avec la livraison, puis le paiement Mobile Money est proposé."
     }
   ];
 
   return (
-    <section id="solution" className="py-24 bg-white overflow-hidden relative">
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none"></div>
+    <section id="solution" className="py-24 bg-surface overflow-hidden relative">
+      <div className="absolute inset-0 bg-[radial-gradient(#d5dde5_1px,transparent_1px)] [background-size:16px_16px] opacity-30 pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-            Confiez votre WhatsApp à notre <span className="text-[#25D366]">Assistant Intelligent.</span>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+            Digitalisez votre activité sur <span className="text-primary">WhatsApp.</span>
           </h2>
-          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
-            Votre assistant virtuel accueille les clients, présente vos produits et prend les commandes.
+          <p className="mt-4 text-xl text-muted max-w-2xl mx-auto">
+            Accueillez les clients, présentez votre offre et prenez les commandes — avec un parcours automatisé, et un assistant commercial 24/7 en Pack Pro.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function SolutionSection() {
               {/* soft glow */}
               <div
                 aria-hidden="true"
-                className="absolute -inset-6 rounded-[3.5rem] bg-gradient-to-br from-[#25D366]/40 via-green-100/20 to-transparent blur-2xl group-hover:blur-3xl transition-all duration-500"
+                className="absolute -inset-6 rounded-[3.5rem] bg-gradient-to-br from-primary/40 via-primary-subtle/50 to-transparent blur-2xl group-hover:blur-3xl transition-all duration-500"
               />
 
               <div className="relative w-[320px] sm:w-[340px] aspect-[9/19] rounded-[3.25rem] bg-gradient-to-b from-gray-950 to-gray-900 p-[10px] shadow-2xl ring-1 ring-white/10 transition-transform duration-500 hover:-translate-y-2 hover:rotate-1 motion-reduce:transform-none">
@@ -83,17 +83,17 @@ export default function SolutionSection() {
                   />
 
                   {/* header */}
-                  <div className="relative z-20 bg-[#075E54] pt-12 pb-4 px-4 text-white shadow-md">
+                  <div className="relative z-20 bg-primary-hover pt-12 pb-4 px-4 text-white shadow-md">
                     <div className="flex items-center gap-3">
                       <div className="h-10 w-10 rounded-full bg-white/10 ring-1 ring-white/15 flex items-center justify-center font-extrabold shadow-inner">
                         <Bot className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-bold leading-tight">
-                          Assistant Sley
+                          SLEY WhatsApp
                         </div>
                         <div className="text-[11px] text-white/75 flex items-center gap-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#25D366]"></span>
+                          <span className="w-1.5 h-1.5 rounded-full bg-success"></span>
                           en ligne
                         </div>
                       </div>
@@ -109,14 +109,14 @@ export default function SolutionSection() {
                     />
 
                     <div className="relative space-y-3 text-[13px] leading-snug">
-                      <div className="mx-auto w-fit rounded-full bg-black/5 px-3 py-1 text-[11px] text-gray-500 font-medium">
+                      <div className="mx-auto w-fit rounded-full bg-black/5 px-3 py-1 text-[11px] text-muted font-medium">
                         Aujourd'hui
                       </div>
 
                       <div className="flex">
-                        <div className="max-w-[86%] rounded-2xl rounded-tl-sm bg-white px-3 py-2 shadow-sm ring-1 ring-black/5">
-                          <div>Bonjour, je veux commander 2 paires de chaussures de la nouvelle collection.</div>
-                          <div className="mt-1 text-[10px] text-gray-400 text-right">
+                        <div className="max-w-[86%] rounded-2xl rounded-tl-sm bg-surface px-3 py-2 shadow-sm ring-1 ring-black/5">
+                          <div>Bonjour, je voudrais commander le menu du jour pour 2 personnes.</div>
+                          <div className="mt-1 text-[10px] text-muted text-right">
                             10:00
                           </div>
                         </div>
@@ -125,19 +125,19 @@ export default function SolutionSection() {
                       <div className="flex justify-end">
                         <div className="max-w-[86%] rounded-2xl rounded-tr-sm bg-[#dcf8c6] px-3 py-2 shadow-sm ring-1 ring-black/5">
                           <div>
-                            Bonjour ! Excellent choix. Ce modèle est à 15 000 FCFA l'unité, soit 30 000 FCFA au total.
-                            Où souhaitez-vous être livré ?
+                            Bonjour ! Le menu du jour est à 3 500 FCFA par personne, soit 7 000 FCFA.
+                            Livraison ou à emporter ?
                           </div>
-                          <div className="mt-1 text-[10px] text-green-900/40 text-right">
+                          <div className="mt-1 text-[10px] text-success/40 text-right">
                             10:00
                           </div>
                         </div>
                       </div>
 
                       <div className="flex">
-                        <div className="max-w-[86%] rounded-2xl rounded-tl-sm bg-white px-3 py-2 shadow-sm ring-1 ring-black/5">
-                          <div>Je suis à Agoè Assiyéyé.</div>
-                          <div className="mt-1 text-[10px] text-gray-400 text-right">
+                        <div className="max-w-[86%] rounded-2xl rounded-tl-sm bg-surface px-3 py-2 shadow-sm ring-1 ring-black/5">
+                          <div>Livraison à Agoè Assiyéyé.</div>
+                          <div className="mt-1 text-[10px] text-muted text-right">
                             10:01
                           </div>
                         </div>
@@ -146,11 +146,11 @@ export default function SolutionSection() {
                       <div className="flex justify-end">
                         <div className="max-w-[86%] rounded-2xl rounded-tr-sm bg-[#dcf8c6] px-3 py-2 shadow-sm ring-1 ring-black/5">
                           <div>
-                            D'accord. La livraison à Agoè coûte 1 000 FCFA. 
-                            Le total est donc de 31 000 FCFA. 
+                            D'accord. La livraison à Agoè coûte 1 000 FCFA.
+                            Le total est 8 000 FCFA.
                             Voulez-vous payer par T-Money ou Flooz ?
                           </div>
-                          <div className="mt-1 text-[10px] text-green-900/40 text-right">
+                          <div className="mt-1 text-[10px] text-success/40 text-right">
                             10:01
                           </div>
                         </div>
@@ -158,7 +158,7 @@ export default function SolutionSection() {
 
                       {/* typing indicator */}
                       <div className="flex justify-start">
-                        <div className="rounded-2xl rounded-tl-sm bg-white px-4 py-3 shadow-sm ring-1 ring-black/5">
+                        <div className="rounded-2xl rounded-tl-sm bg-surface px-4 py-3 shadow-sm ring-1 ring-black/5">
                           <div className="flex items-center gap-1.5">
                             <span className="h-1.5 w-1.5 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.2s] motion-reduce:animate-none" />
                             <span className="h-1.5 w-1.5 rounded-full bg-gray-400 animate-bounce [animation-delay:-0.1s] motion-reduce:animate-none" />
@@ -181,11 +181,11 @@ export default function SolutionSection() {
 
                   {/* composer */}
                   <div className="absolute bottom-0 inset-x-0 z-20 px-4 pb-4 bg-[#EFEAE2]/90 backdrop-blur-sm pt-2">
-                    <div className="flex items-center gap-2 rounded-full bg-white px-3 py-2 shadow-sm ring-1 ring-black/5">
-                      <div className="h-8 w-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500">
+                    <div className="flex items-center gap-2 rounded-full bg-surface px-3 py-2 shadow-sm ring-1 ring-black/5">
+                      <div className="h-8 w-8 rounded-full bg-surface-muted flex items-center justify-center text-muted">
                         <Smile className="w-5 h-5" />
                       </div>
-                      <div className="flex-1 text-gray-400 text-sm px-1">
+                      <div className="flex-1 text-muted text-sm px-1">
                         Message
                       </div>
                       <div className="h-9 w-9 rounded-full bg-[#00A884] text-white flex items-center justify-center shadow-md">
@@ -209,12 +209,12 @@ export default function SolutionSection() {
             <div className="space-y-10">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex gap-6 group">
-                  <div className="flex-shrink-0 w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center border border-green-100 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex-shrink-0 w-14 h-14 bg-primary-subtle rounded-2xl flex items-center justify-center border border-primary/20 shadow-sm group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                    <p className="text-lg text-gray-600 leading-relaxed">{benefit.description}</p>
+                    <h3 className="text-2xl font-bold text-foreground mb-2">{benefit.title}</h3>
+                    <p className="text-lg text-muted leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
               ))}

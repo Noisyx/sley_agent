@@ -1,3 +1,5 @@
+> Document interne obsolète — l’offre actuelle est Essential 45 000 FCFA (digitalisation WhatsApp) et Pro 65 000 FCFA (assistant commercial IA 24/7), pour Restaurants et Transport & Livraison.
+
 C'est une excellente idée de projet. Au Togo (et en Afrique de l'Ouest en général), **WhatsApp n'est pas juste une application de messagerie, c'est l'Internet.** Les gens préfèrent discuter sur WhatsApp plutôt que de visiter un site web ou de télécharger une application. 
 
 Lancer des agents IA sur WhatsApp pour automatiser le service client et les ventes répond à un vrai besoin : les entrepreneurs sont souvent débordés par les messages, perdent des ventes parce qu'ils répondent trop tard, ou n'ont pas les moyens d'embaucher une équipe de support 24/7.

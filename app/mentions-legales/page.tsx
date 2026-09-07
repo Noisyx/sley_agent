@@ -7,17 +7,17 @@ export const metadata = {
 
 export default function MentionsLegalesPage() {
   return (
-    <main className="min-h-screen bg-white pt-28 pb-16">
+    <main className="min-h-screen bg-surface pt-28 pb-16">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <Link href="/" className="text-sm font-medium text-green-700">
+          <Link href="/" className="text-sm font-medium text-primary">
             ← Retour à l’accueil
           </Link>
         </div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-black mb-6">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-foreground mb-6">
           Mentions légales
         </h1>
-        <div className="max-w-none text-black">
+        <div className="max-w-none text-foreground">
           <p>
             Conformément aux dispositions applicables, les informations
             suivantes sont portées à la connaissance des utilisateurs du site.

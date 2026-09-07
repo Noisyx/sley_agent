@@ -4,16 +4,16 @@ import { MessageSquareWarning, Moon, TimerOff, Frown } from "lucide-react";
 
 export default function ProblemSection() {
   return (
-    <section id="problem" className="py-24 bg-gray-50 overflow-hidden relative">
+    <section id="problem" className="py-24 bg-background overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="w-full lg:w-1/2">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-zinc-900 mb-8 leading-tight">
-              Vos journées ressemblent-elles à <span className="text-orange-500">ça ?</span>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-8 leading-tight">
+              Vos journées ressemblent-elles à <span className="text-accent">ça ?</span>
             </h2>
-            <div className="space-y-6 text-lg text-gray-700">
+            <div className="space-y-6 text-lg text-muted">
               <div className="flex items-start gap-4">
-                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                <div className="shrink-0 p-2 bg-accent-subtle rounded-full text-accent">
                   <MessageSquareWarning className="w-6 h-6" />
                 </div>
                 <p>
@@ -21,7 +21,7 @@ export default function ProblemSection() {
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                <div className="shrink-0 p-2 bg-accent-subtle rounded-full text-accent">
                   <Moon className="w-6 h-6" />
                 </div>
                 <p>
@@ -29,7 +29,7 @@ export default function ProblemSection() {
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                <div className="shrink-0 p-2 bg-accent-subtle rounded-full text-accent">
                   <TimerOff className="w-6 h-6" />
                 </div>
                 <p>
@@ -37,7 +37,7 @@ export default function ProblemSection() {
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="shrink-0 p-2 bg-orange-100 rounded-full text-orange-500">
+                <div className="shrink-0 p-2 bg-accent-subtle rounded-full text-accent">
                   <Frown className="w-6 h-6" />
                 </div>
                 <p>
@@ -50,9 +50,9 @@ export default function ProblemSection() {
           <div className="w-full lg:w-1/2 relative">
             <div
               aria-hidden="true"
-              className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-orange-200/40 via-orange-100/10 to-transparent blur-2xl"
+              className="absolute -inset-8 rounded-[3rem] bg-gradient-to-br from-accent-subtle via-accent-subtle/40 to-transparent blur-2xl"
             />
-            <div className="relative overflow-hidden rounded-[2.75rem] border border-gray-100 bg-white shadow-xl transition-transform duration-500 hover:-translate-y-2">
+            <div className="relative overflow-hidden rounded-[2.75rem] border border-border bg-surface shadow-xl transition-transform duration-500 hover:-translate-y-2">
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src={withBasePath("/problem.jpg")}

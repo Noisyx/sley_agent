@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "SLEY AI — Agent IA WhatsApp qui convertit 24/7",
+    default: "SLEY AI — Digitalisation WhatsApp pour restaurants et livraison",
     template: "%s — SLEY AI",
   },
   description:
-    "Automatisez vos réponses WhatsApp, qualifiez vos prospects et convertissez vos clients 24h/24. Solution IA 100% africaine",
+    "Digitalisez vos processus métier sur WhatsApp. Pack Essential : automatisation. Pack Pro : assistant commercial IA 24/7 adapté à votre métier.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`${sora.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
