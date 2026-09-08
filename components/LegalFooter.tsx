@@ -90,14 +90,13 @@ export default function LegalFooter() {
               <span>contact@daana.tech</span>
             </a>
             <div className="text-[11px] text-gray-400">
-              Domaine principal :{" "}
+              Domaine :{" "}
               <a
                 href="https://daana.tech"
                 className="underline hover:text-gray-600"
               >
                 daana.tech
-              </a>{" "}
-              (domaine secondaire : ai.sley.group)
+              </a>
             </div>
           </div>
         </div>
